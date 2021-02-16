@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Reggae+One&display=swap");
 
 * {
   padding: 0;
@@ -79,11 +80,57 @@ nav ul#user_info a:hover {
   font-weight: 700;
 }
 
-/* Home Page */
-section.home {
-  background: orangered;
+/* Home Page Slider */
+.home-slider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.home-slider .product-desc {
+  margin-left: 70px;
+  flex: 2;
+  position: relative;
+  top: 10px;
+}
+.home-slider .product-desc h1 {
+  font-size: 80px;
+  font-family: "Reggae One", cursive;
+  color: #0b1c39;
+  margin-bottom: 30px;
+}
+.home-slider .product-desc p {
+  font-size: 18px;
+  width: 600px;
+  line-height: 27px;
+}
+.home-slider .product-desc button {
+  margin: 50px 0;
+  border: none;
+  padding: 20px 30px;
+  background: #494a4a;
   color: #fff;
-  padding: 30px;
-  text-align: center;
   text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.5s linear;
+}
+.home-slider .product-desc button:hover {
+  background: red;
+}
+.home-slider img {
+  margin-right: 60px;
+  transition: color 0.4s linear;
+  animation: product 1.5s alternate infinite;
+  transform: scale(0.9);
+}
+@keyframes product {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
 }
